@@ -3,43 +3,613 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guincho LS</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Serviços de guincho 24 horas para carros, motos e vans. Atendimento rápido e eficiente em toda a região.">
+    <title>Guincho Rápido - Serviços de Guincho 24h</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <!-- Cabeçalho -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Guincho Rápido Logo" id="logo-img">
+                    <h1>Guincho<span>Rápido</span></h1>
+                </a>
+            </div>
+            
+            <div class="contato-rapido">
+                <div class="contato-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(11) 99999-9999</span>
+                </div>
+                <div class="contato-item whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>(11) 99999-8888</span>
+                </div>
+            </div>
+            
+            <nav id="nav">
+                <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                    <span id="hamburger"></span>
+                </button>
+                <ul id="menu" role="menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#areas">Áreas de Atendimento</a></li>
+                    <li><a href="#faq">Dúvidas Frequentes</a></li>
+                    <li><a href="#contato" class="btn-contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section id="servicos">
-            <h1>Serviços</h1>
-            <ul>
-                <li>Guincho 24 horas</li>
-                <li>Reboque de veículos</li>
-                <li>Assistência mecânica</li>
-            </ul>
-        </section>
-        <section id="contato">
-            <h1>Contato</h1>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome"><br><br>
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone"><br><br>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem"></textarea><br><br>
-                <input type="submit" value="Enviar">
+
+    <!-- Banner Principal -->
+    <section id="banner">
+        <div class="container">
+            <div class="slider">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Serviço de Guincho 24h</h2>
+                        <p>Atendimento rápido e eficiente para seu veículo em qualquer situação de emergência</p>
+                        <a href="#contato" class="btn btn-primary">Solicitar Guincho</a>
+                    </div>
+                    <div class="slide-img" style="background-image: url('img/banner1.jpg');"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Transporte de Motos</h2>
+                        <p>Serviço especializado para transporte seguro de motocicletas</p>
+                        <a href="#contato" class="btn btn-primary">Solicitar Guincho</a>
+                    </div>
+                    <div class="slide-img" style="background-image: url('img/banner2.jpg');"></div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Transporte de Vans e Utilitários</h2>
+                        <p>Equipamentos adequados para veículos de maior porte</p>
+                        <a href="#contato" class="btn btn-primary">Solicitar Guincho</a>
+                    </div>
+                    <div class="slide-img" style="background-image: url('img/banner3.jpg');"></div>
+                </div>
+                <button class="slider-btn prev" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada de Emergência Flutuante -->
+    <div class="emergency-call">
+        <a href="tel:11999999999" class="btn-emergency">
+            <i class="fas fa-phone-alt"></i>
+            <span>Emergência</span>
+        </a>
+    </div>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quem Somos</h2>
+                <p>Conheça nossa história e nossos valores</p>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-img">
+                    <img src="img/sobre.jpg" alt="Equipe Guincho Rápido">
+                </div>
+                <div class="sobre-text">
+                    <h3>Guincho Rápido - Sua segurança é nossa prioridade</h3>
+                    <p>Fundada em 2010, a Guincho Rápido nasceu com o objetivo de oferecer serviços de qualidade no transporte de veículos. Com mais de 10 anos de experiência, nos tornamos referência em atendimento rápido e eficiente.</p>
+                    <p>Nossa equipe é formada por profissionais treinados e capacitados para lidar com diferentes situações de emergência, garantindo a segurança do seu veículo durante todo o processo de transporte.</p>
+                    <div class="sobre-numeros">
+                        <div class="numero-item">
+                            <span class="numero">10+</span>
+                            <span class="texto">Anos de Experiência</span>
+                        </div>
+                        <div class="numero-item">
+                            <span class="numero">5000+</span>
+                            <span class="texto">Clientes Atendidos</span>
+                        </div>
+                        <div class="numero-item">
+                            <span class="numero">24h</span>
+                            <span class="texto">Disponibilidade</span>
+                        </div>
+                    </div>
+                    <a href="#equipe" class="btn btn-secondary">Conheça Nossa Equipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Serviços</h2>
+                <p>Soluções completas para o transporte do seu veículo</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Guincho para Carros</h3>
+                    <p>Transporte seguro para automóveis de passeio, independente do modelo ou tamanho.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Guincho para Motos</h3>
+                    <p>Equipamento especializado para o transporte seguro de motocicletas de todos os portes.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-shuttle-van"></i>
+                    </div>
+                    <h3>Guincho para Vans</h3>
+                    <p>Transporte de vans e veículos utilitários com equipamentos adequados.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-truck-pickup"></i>
+                    </div>
+                    <h3>Guincho para Caminhonetes</h3>
+                    <p>Serviço especializado para caminhonetes e veículos de maior porte.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Assistência Mecânica</h3>
+                    <p>Serviços básicos de mecânica para resolver problemas simples no local.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Auxílio Bateria</h3>
+                    <p>Serviço de auxílio para partida em caso de bateria descarregada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section id="como-funciona" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona</h2>
+                <p>Entenda o processo do nosso atendimento</p>
+            </div>
+            <div class="processo-steps">
+                <div class="processo-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Entre em Contato</h3>
+                    <p>Ligue para nosso número de emergência ou envie uma mensagem pelo WhatsApp.</p>
+                </div>
+                <div class="processo-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Informe sua Localização</h3>
+                    <p>Forneça detalhes sobre onde você está e a situação do veículo.</p>
+                </div>
+                <div class="processo-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Aguarde o Guincho</h3>
+                    <p>Nossa equipe será enviada imediatamente para o local informado.</p>
+                </div>
+                <div class="processo-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Transporte Seguro</h3>
+                    <p>Seu veículo será transportado com segurança até o destino desejado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Depoimentos</h2>
+                <p>O que nossos clientes dizem sobre nossos serviços</p>
+            </div>
+            <div class="depoimentos-slider">
+                <div class="depoimento-slide active">
+                    <div class="depoimento-content">
+                        <div class="depoimento-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="depoimento-texto">"Serviço excelente! Meu carro quebrou na estrada e em menos de 30 minutos o guincho já estava lá. Profissionais educados e cuidadosos com o veículo."</p>
+                        <div class="depoimento-autor">
+                            <img src="img/cliente1.jpg" alt="Carlos Silva">
+                            <div>
+                                <h4>Carlos Silva</h4>
+                                <span>São Paulo, SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-slide">
+                    <div class="depoimento-content">
+                        <div class="depoimento-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="depoimento-texto">"Precisei de um guincho para minha moto e fiquei impressionada com a rapidez e cuidado no transporte. Super recomendo!"</p>
+                        <div class="depoimento-autor">
+                            <img src="img/cliente2.jpg" alt="Ana Oliveira">
+                            <div>
+                                <h4>Ana Oliveira</h4>
+                                <span>Guarulhos, SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-slide">
+                    <div class="depoimento-content">
+                        <div class="depoimento-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="depoimento-texto">"Atendimento 24 horas que realmente funciona! Precisei de um guincho às 3h da manhã e fui prontamente atendido. Serviço de qualidade e preço justo."</p>
+                        <div class="depoimento-autor">
+                            <img src="img/cliente3.jpg" alt="Roberto Mendes">
+                            <div>
+                                <h4>Roberto Mendes</h4>
+                                <span>Osasco, SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="depoimento-btn prev" aria-label="Depoimento anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="depoimento-btn next" aria-label="Próximo depoimento"><i class="fas fa-chevron-right"></i></button>
+                <div class="depoimento-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Áreas de Atendimento -->
+    <section id="areas" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Atendimento</h2>
+                <p>Cobertura em toda a região metropolitana</p>
+            </div>
+            <div class="areas-content">
+                <div class="areas-map">
+                    <div id="mapa" class="mapa-container">
+                        <!-- Mapa será carregado via JavaScript -->
+                        <img src="img/mapa.jpg" alt="Mapa de áreas de atendimento" class="mapa-fallback">
+                    </div>
+                </div>
+                <div class="areas-list">
+                    <h3>Regiões Atendidas</h3>
+                    <div class="areas-grid">
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo (Capital)</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Guarulhos</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Osasco</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santo André</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Bernardo do Campo</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Caetano do Sul</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Diadema</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Taboão da Serra</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Barueri</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cotia</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Mauá</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Suzano</span>
+                        </div>
+                    </div>
+                    <p class="areas-note">Não encontrou sua região? Entre em contato para verificar disponibilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Respostas para as perguntas mais comuns</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quanto tempo demora para o guincho chegar?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O tempo médio de chegada é de 30 a 45 minutos, dependendo da localização e das condições de trânsito. Em casos de emergência, priorizamos o atendimento para reduzir o tempo de espera.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quais formas de pagamento são aceitas?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceitamos pagamento em dinheiro, cartões de crédito e débito, PIX e transferência bancária. Para clientes empresariais, também oferecemos opção de faturamento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>É possível solicitar guincho para outro município?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, realizamos atendimento intermunicipal e interestadual. Para estes casos, é necessário consultar a disponibilidade e o valor específico para a distância desejada.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>O serviço de guincho funciona 24 horas?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, nosso serviço está disponível 24 horas por dia, 7 dias por semana, incluindo feriados. Estamos sempre prontos para atender suas emergências.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como é calculado o valor do serviço?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O valor é calculado com base na distância a ser percorrida, tipo de veículo e complexidade do serviço. Fornecemos um orçamento prévio antes de iniciar o atendimento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Posso acompanhar o veículo durante o transporte?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, oferecemos a possibilidade de o cliente acompanhar o transporte do veículo na cabine do guincho, respeitando o limite de passageiros permitido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para atender sua emergência</p>
+            </div>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-card">
+                        <div class="contato-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p><a href="tel:11999999999">(11) 99999-9999</a></p>
+                        <p><a href="tel:1155555555">(11) 5555-5555</a></p>
+                    </div>
+                    <div class="contato-card">
+                        <div class="contato-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/5511999998888" target="_blank">(11) 99999-8888</a></p>
+                    </div>
+                    <div class="contato-card">
+                        <div class="contato-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:contato@guinchorapido.com.br">contato@guinchorapido.com.br</a></p>
+                    </div>
+                    <div class="contato-card">
+                        <div class="contato-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Endereço</h3>
+                        <p>Av. Paulista, 1000 - Bela Vista</p>
+                        <p>São Paulo - SP, 01310-100</p>
+                    </div>
+                </div>
+                <div class="contato-form">
+                    <h3>Envie uma mensagem</h3>
+                    <form id="form-contato">
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="emergencia">Emergência - Preciso de guincho</option>
+                                <option value="orcamento">Solicitar orçamento</option>
+                                <option value="informacoes">Informações gerais</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora de Preço (Modal) -->
+    <div id="calculadora-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Calculadora de Preço</h2>
+            <p>Faça uma estimativa do valor do serviço de guincho</p>
+            <form id="form-calculadora">
+                <div class="form-group">
+                    <label for="tipo-veiculo">Tipo de Veículo</label>
+                    <select id="tipo-veiculo" name="tipo-veiculo" required>
+                        <option value="">Selecione o tipo de veículo</option>
+                        <option value="carro">Carro de Passeio</option>
+                        <option value="moto">Motocicleta</option>
+                        <option value="van">Van/Utilitário</option>
+                        <option value="caminhonete">Caminhonete</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="origem">Origem (Bairro/Cidade)</label>
+                    <input type="text" id="origem" name="origem" required>
+                </div>
+                <div class="form-group">
+                    <label for="destino">Destino (Bairro/Cidade)</label>
+                    <input type="text" id="destino" name="destino" required>
+                </div>
+                <div class="form-group">
+                    <label for="distancia">Distância aproximada (km)</label>
+                    <input type="number" id="distancia" name="distancia" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Calcular</button>
             </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Guincho</p>
+            <div id="resultado-calculo" class="hidden">
+                <h3>Valor Estimado</h3>
+                <p class="preco">R$ <span id="valor-estimado">0,00</span></p>
+                <p class="obs">Este é apenas um valor estimado. O valor final pode variar de acordo com as condições específicas do serviço.</p>
+                <a href="#contato" class="btn btn-secondary btn-block fechar-modal">Solicitar Guincho</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Flutuante para Calculadora -->
+    <div class="floating-calc">
+        <button id="btn-calculadora" class="btn-calc">
+            <i class="fas fa-calculator"></i>
+            <span>Calcular Preço</span>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Guincho Rápido Logo">
+                    <h2>Guincho<span>Rápido</span></h2>
+                    <p>Serviços de guincho 24 horas para sua tranquilidade.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#areas">Áreas de Atendimento</a></li>
+                        <li><a href="#faq">Dúvidas Frequentes</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contato">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fab fa-whatsapp"></i> (11) 99999-8888</p>
+                    <p><i class="fas fa-envelope"></i> contato@guinchorapido.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo/SP</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Guincho Rápido - Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="#" target="_blank">Sua Empresa</a></p>
+            </div>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="btn-topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
+
