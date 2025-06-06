@@ -1,9 +1,6 @@
-// Adicione um evento de click no botão de enviar
 document.querySelector('input[type="submit"]').addEventListener('click', function(event) {
-    // Previna o comportamento padrão do formulário
     event.preventDefault();
 
-    // Obtenha os valores dos campos do formulário
     var nome = document.querySelector('#nome').value;
     var telefone = document.querySelector('#telefone').value;
     var mensagem = document.querySelector('#mensagem').value;
